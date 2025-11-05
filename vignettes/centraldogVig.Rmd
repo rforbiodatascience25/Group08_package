@@ -1,10 +1,10 @@
 ---
 title: "centraldogVig"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{centraldogVig}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output:
+  rmarkdown::html_vignette: default
+  rmarkdown::pdf_document: default
+vignette: "%\\VignetteIndexEntry{centraldogVig} %\\VignetteEngine{knitr::rmarkdown}
+  %\\VignetteEncoding{UTF-8}"
 ---
 
 ```{r, include = FALSE}
@@ -12,8 +12,39 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+
 ```
 
 ```{r setup}
-library(centraldog)
+library(centraldog) # load the package
+```
+
+```{r}
+# create random DNA sequence
+create_DNA(n = 10)
+# note that it returns object called DNA_seq
+```
+
+```{r}
+# turn the created DNA into RNA
+DNA_to_RNA("GGTGTTTGAC")
+# note that it returns object called RNA_seq
+```
+
+```{r}
+# find codons using default start position (1)
+find_codons("GGUGUUUGAC")
+# find codons using frameshift +2
+find_codons("GGUGUUUGAC", 2)
+```
+
+```{r}
+# traslate codons to amino acids
+translate_codons(c("GGU", "GUU", "UGA"))
+```
+
+```{r}
+# generate base distribution plot
+base_dist_plot("GGTGTTTGAC")
+base_dist_plot("GGUGUUUGAC")
 ```

@@ -7,15 +7,20 @@ Authors@R:
            family = "Danilova",
            role = c("aut", "cre"), # There must be a "cre", but there can only be one
            email = "s242794@dtu.dk"))
-Description: Idk yet.
-    To be added, hopefully.
+Description: Provides five functions to (1) create random DNA, (2) turn it to RNA, (3) find the codon, and (4) translate the codons. 
+    The last function produces a plot that shows the distribution of the bases in a given sequence.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Depends: 
     R (>= 3.5)
 RoxygenNote: 7.3.2
+Imports: 
+    ggplot2,
+    stringr
+Config/testthat/edition: 3
