@@ -1,0 +1,18 @@
+Package: centraldog
+Type: Package
+Title: Replicate Central Dogma of Molecular Biology
+Version: 0.1.0
+Authors@R:
+  c(person(given = "Daniela Dana",
+           family = "Danilova",
+           role = c("aut", "cre"), # There must be a "cre", but there can only be one
+           email = "s242794@dtu.dk"))
+Description: Idk yet.
+    To be added, hopefully.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
